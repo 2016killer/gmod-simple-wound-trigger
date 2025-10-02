@@ -154,37 +154,37 @@ if CLIENT then
 {
 	"models/vortigaunt_slave.mdl": {
 		"projectedtexture": "swt/alienflesh",
-		"shader": "SimpWound",
+		"shader": "SimpWoundVertexLit",
 		"deformedtexture": "swt/alienflesh",
 		"skip": false
 	},
 	"models/headcrabclassic.mdl": {
 		"projectedtexture": "swt/alienflesh",
-		"shader": "SimpWound",
+		"shader": "SimpWoundVertexLit",
 		"deformedtexture": "swt/alienflesh",
 		"skip": false
 	},
 	"models/antlion_guard.mdl": {
 		"projectedtexture": "swt/alienflesh",
-		"shader": "SimpWound",
+		"shader": "SimpWoundVertexLit",
 		"deformedtexture": "swt/alienflesh",
 		"skip": false
 	},
 	"models/vortigaunt.mdl": {
 		"projectedtexture": "swt/alienflesh",
-		"shader": "SimpWound",
+		"shader": "SimpWoundVertexLit",
 		"deformedtexture": "swt/alienflesh",
 		"skip": false
 	},
 	"models/antlion.mdl": {
 		"projectedtexture": "swt/alienflesh",
-		"shader": "SimpWound",
+		"shader": "SimpWoundVertexLit",
 		"deformedtexture": "swt/alienflesh",
 		"skip": false
 	},
 	"models/vortigaunt_doctor.mdl": {
 		"projectedtexture": "swt/alienflesh",
-		"shader": "SimpWound",
+		"shader": "SimpWoundVertexLit",
 		"deformedtexture": "swt/alienflesh",
 		"skip": false
 	}
