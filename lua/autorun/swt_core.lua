@@ -149,7 +149,47 @@ end
 
 
 if CLIENT then
-	SWTData = SWTData or {}
+	SWTData = SWTData or util.JSONToTable(
+[[
+{
+	"models/vortigaunt_slave.mdl": {
+		"projectedtexture": "swt/alienflesh",
+		"shader": "SimpWound",
+		"deformedtexture": "swt/alienflesh",
+		"skip": false
+	},
+	"models/headcrabclassic.mdl": {
+		"projectedtexture": "swt/alienflesh",
+		"shader": "SimpWound",
+		"deformedtexture": "swt/alienflesh",
+		"skip": false
+	},
+	"models/antlion_guard.mdl": {
+		"projectedtexture": "swt/alienflesh",
+		"shader": "SimpWound",
+		"deformedtexture": "swt/alienflesh",
+		"skip": false
+	},
+	"models/vortigaunt.mdl": {
+		"projectedtexture": "swt/alienflesh",
+		"shader": "SimpWound",
+		"deformedtexture": "swt/alienflesh",
+		"skip": false
+	},
+	"models/antlion.mdl": {
+		"projectedtexture": "swt/alienflesh",
+		"shader": "SimpWound",
+		"deformedtexture": "swt/alienflesh",
+		"skip": false
+	},
+	"models/vortigaunt_doctor.mdl": {
+		"projectedtexture": "swt/alienflesh",
+		"shader": "SimpWound",
+		"deformedtexture": "swt/alienflesh",
+		"skip": false
+	}
+}]]
+	)
 
 	function SWTLoadDataFile(path)
 		if file.Exists(path, 'GAME') then
