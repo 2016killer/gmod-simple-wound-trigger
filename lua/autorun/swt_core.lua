@@ -73,7 +73,7 @@ local function GetBoneIdByHitgroup(ent, hitgroup)
 end
 
 local function GetWoundSize(ent, hitgroup, dmgtype)
-	return (HITGROUP_WOUND_SIZE[hitgroup] or HITGROUP_WOUND_SIZE[HITGROUP_HEAD])[dmgtype]
+	return (HITGROUP_WOUND_SIZE[hitgroup] or HITGROUP_WOUND_SIZE[HITGROUP_HEAD])[dmgtype] or Vector(5, 3, 3)
 end
 
 
@@ -115,16 +115,21 @@ if SERVER then
 		end
 		
 		local dmg = dmginfo:GetDamage()
-		if dmg > npc:Health() then
-			local params = {
+		local params = npc.swt_params
+		if istable(params) then
+			params.pos = dmginfo:GetDamagePosition()
+			params.dir = -dmginfo:GetDamageForce()
+			params.dmg = dmg
+			params.dmgtype = dmginfo:GetDamageType()
+			params.hitgroup = hitgroup
+		else
+			npc.swt_params = {
 				pos = dmginfo:GetDamagePosition(),
 				dir = -dmginfo:GetDamageForce(),
 				dmg = dmg,
 				dmgtype = dmginfo:GetDamageType(),
 				hitgroup = hitgroup
 			}
-
-			npc.swt_params = params
 		end
 	end)
 
